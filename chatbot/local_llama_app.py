@@ -25,8 +25,8 @@ st.title("Langchain Demo ChatBot with Ollama")
 input_text = st.text_input("ask Your Query")
 
 
-# NOTE: to run this, first run the command "ollama run llama2" on the command prompt
-llm = Ollama(model="llama2")
+# NOTE: to run this, first run the command "ollama run gemma:2b" on the command prompt
+llm = Ollama(model="gemma:2b")
 output_parser = StrOutputParser
 chain = prompt|llm|output_parser
 
