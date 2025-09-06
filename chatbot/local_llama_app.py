@@ -1,7 +1,6 @@
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_community.llms import Ollama
+from langchain_community.chat_models import ChatOllama
 import streamlit as st
 import os
 from dotenv import load_dotenv
@@ -17,7 +16,7 @@ os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", "You're an AI assistant. Answer the user queries."),
-        ("user", "Question:{question}")
+        ("user", "Question: {question}")
     ]
 )
 
@@ -26,8 +25,8 @@ input_text = st.text_input("ask Your Query")
 
 
 # NOTE: to run this, first run the command "ollama run gemma:2b" on the command prompt
-llm = Ollama(model="gemma:2b")
-output_parser = StrOutputParser
+llm = ChatOllama(model="gemma:2b")  #This model is too tiny, might hallucinate.
+output_parser = StrOutputParser()
 chain = prompt|llm|output_parser
 
 if input_text:
