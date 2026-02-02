@@ -1,5 +1,9 @@
-# SQL COMPLETE WORKBOOK: Basic to Advanced
+import streamlit as st
 
+st.title("SQL COMPLETE WORKBOOK: Basic to Advanced")
+
+st.divider()
+st.markdown("""
 ## 1. SELECT & WHERE - Getting Data
 **Intuition**: Ask for specific columns and filter rows that meet conditions.
 
@@ -378,3 +382,4 @@ ON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name, email = EXCLUDED.email;
 8. LIMIT/OFFSET
 
 **Remember**: You can't use column aliases from SELECT in WHERE, but you can in ORDER BY and HAVING.
+""")
