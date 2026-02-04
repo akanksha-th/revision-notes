@@ -1,7 +1,7 @@
 [project]
-name = "learning-langchain"
+name = "revision-notes"
 version = "0.1.0"
-description = "Add your description here"
+description = "These are just some quick revision notes that I use."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
