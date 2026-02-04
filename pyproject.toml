@@ -3,7 +3,7 @@ name = "revision-notes"
 version = "0.1.0"
 description = "These are just some quick revision notes that I use."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "matplotlib>=3.10.8",
     "plotly>=6.5.2",
