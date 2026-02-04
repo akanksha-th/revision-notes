@@ -376,10 +376,10 @@ ON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name, email = EXCLUDED.email;
 2. WHERE
 3. GROUP BY
 4. HAVING
-5. SELECT
+5. SELECT <- _aliases are created here_
 6. DISTINCT
-7. ORDER BY
+7. ORDER BY <- _aliases are available here_
 8. LIMIT/OFFSET
 
-**Remember**: You can't use column aliases from SELECT in WHERE, but you can in ORDER BY and HAVING.
+**Remember**: You can't use column aliases from SELECT in WHERE, but you can in ORDER BY.
 """)
