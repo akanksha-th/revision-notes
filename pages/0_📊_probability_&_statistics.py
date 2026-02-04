@@ -643,7 +643,7 @@ elif section == "📊 Probability Measures":
         st.warning("""
         **Special Case**: When all outcomes in Ω are equally likely, we have a simple formula:
         
-        $$P(A) = \frac{|A|}{|\Omega|} = \frac{\text{\# of outcomes in A}}{\text{total \# of outcomes}}$$
+        r"$$P(A) = \frac{|A|}{|\Omega|} = \frac{\text{\# of outcomes in A}}{\text{total \# of outcomes}}$$"
         
         This is why counting is so important in probability!
         """)
